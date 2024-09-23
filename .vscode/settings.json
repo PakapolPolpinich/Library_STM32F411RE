@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "stm32f411re_by_belt.h": "c"
+    },
+    "accessibility.signalOptions.volume": 50
+}
