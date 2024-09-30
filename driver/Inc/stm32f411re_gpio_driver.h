@@ -18,10 +18,10 @@
 #define GPIOEEN     4
 #define GPIOHEN     7
 
-#define RCC_AHB1PERIPH  0
-#define RCC_AHB2PERIPH  1
-#define RCC_APB1PERIPH  2
-#define RCC_APB2PERIPH  3
+#define RCC_AHB1PERIPH  1
+#define RCC_AHB2PERIPH  2
+#define RCC_APB1PERIPH  3
+#define RCC_APB2PERIPH  4
 
 
 

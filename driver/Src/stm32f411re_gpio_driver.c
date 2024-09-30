@@ -24,12 +24,16 @@ void RCC_peripheral_clock_enable(RCC_RegDef_t* pRCC,uint8_t name_clock,uint8_t	p
 	switch (peripheral){
 		case 1:
 			pRCC->AHB1ENR	|=  (1<<name_clock);
+			break;
 		case 2:
 			pRCC->AHB2ENR	|= 	(1<<name_clock);
+			break;
 		case 3:
 			pRCC->APB1ENR	|=  (1<<name_clock);
+			break;
 		case 4:
 			pRCC->APB2ENR	|= 	(1<<name_clock);
+			break;
 	}
 }
 
@@ -53,6 +57,7 @@ void RCC_peripheral_clock_enable(RCC_RegDef_t* pRCC,uint8_t name_clock,uint8_t	p
 void GPIO_pinMode(GPIO_RegDef_t *pGPIO,uint8_t pin,uint8_t mode,uint8_t speed,uint8_t pupd,uint8_t AFRLH){
 	pGPIO->MODER	&= 	~(0x3 << (pin*2));
 	pGPIO->MODER 	|= 	(mode << (pin*2));
+
 	pGPIO->OSPEEDR 	&= 	~(0x3 << (pin*2));
 	pGPIO->OSPEEDR 	|= 	(speed << (pin*2));
 	pGPIO->PUPDR 	&= 	~(0x3 << (pin*2));
